@@ -1,4 +1,7 @@
 # Byte-compiled / optimized / DLL files
+tornserver/.idea/
+
+\.idea/workspace.xml
 __pycache__/
 *.py[cod]
 *$py.class

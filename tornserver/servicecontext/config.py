@@ -21,3 +21,18 @@ class Config(Singleton):
         cf = ConfigParser.ConfigParser()
         cf.read(file)
         self.hq_server_url = cf.get("hq", "hq_server_url")
+
+
+    @staticmethod
+    def instance():
+        """Returns a global `IOLoop` instance.
+
+        Most applications have a single, global `IOLoop` running on the
+        main thread.  Use this method to get this instance from
+        another thread.  In most other cases, it is better to use `current()`
+        to get the current thread's `IOLoop`.
+        """
+        if not hasattr(Config, "_instance"):
+            # New instance after double check
+            Config._instance = Config()
+        return Config._instance

@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+def jasidjaisfja
+
 def percent(s):
     """
     使用百分比显示浮点数
